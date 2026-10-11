@@ -1,0 +1,95 @@
+<style>
+div{
+    border: 2px #666 solid;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 200px;
+}
+ul{
+    margin: 0;
+}
+li{
+    border: 1px #666 solid;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px auto;
+    background-color: white;
+    cursor: pointer;
+    list-style-type: none;
+}
+.li{
+    background-color: black;
+    color: aliceblue;
+}
+input{
+    border: 1px #666 solid;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px auto;
+    width: 100%;
+}
+button{
+    border: 1px #666 solid;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px auto;
+    width: 50%;
+    background-color: black;
+    color: aliceblue;
+}
+
+</style>
+<div>
+    <ul>
+    <li>Rice</li>
+    <li>Beans</li>
+    <li>Yam</li>
+    <li>Amala</li>
+    </ul>
+    <input type="text">
+    <button>ADD</button>
+</div>
+
+<script>
+    const ul = document.querySelector("ul")
+    const li = document.querySelectorAll("li")
+
+    li.forEach(list => {
+        list.addEventListener("click", () => {
+        
+        list.classList.toggle("li")
+        
+        })
+    });
+
+//document.querySelector("ul").addEventListener("click",
+    //(e) => {
+    //    const elem = e.target
+     //   if(elem.matches("li")){
+      //      elem.style.backgroundColor = "green"
+      //  }
+   // }
+//)
+const input = document.querySelector("input")
+const submit = document.querySelector("button")
+
+
+submit.addEventListener("click", () => {
+    if(input.value.trim() !== ""){
+    const li = document.createElement("li")
+    const ul = document.querySelector("ul")
+    li.innerText = input.value
+    ul.append(li)
+    document.querySelector("input").value = ""
+
+    
+        li.addEventListener("click", () => {
+        
+        li.classList.toggle("li")
+        
+        })
+    }
+    });
+
+</script>

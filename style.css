@@ -1,0 +1,13 @@
+ul{
+    border: 2px #666 solid;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+li{
+    border: 1px #666 solid;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px auto;
+    cursor: pointer;
+}
